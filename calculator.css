@@ -1,0 +1,20 @@
+table, th, td {
+    border: 1px solid black;
+}
+table td .items {
+    min-width: 500px;
+}
+
+table td.total,
+table th.total {
+    min-width: 100px;
+}
+
+.warning {
+    color: red;
+}
+
+button {
+    min-width: 80px;
+    min-height: 30px;
+}

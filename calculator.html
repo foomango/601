@@ -1,0 +1,52 @@
+﻿<html>
+  <head>
+    <title>Balance</title>
+    <link rel="stylesheet" type="text/css" href="calculator.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="calculator.js"></script>
+  </head>
+  <body>
+    <div class="calc">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Items</th>
+            <th class="total">Total</th>
+            <th>Balance</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr id="fengwei">
+            <td><label>Fengwei</label></td>
+            <td><input class="items"></td>
+            <td><label class="total"></label></td>
+            <td><label class="balance"></label></td>
+          </tr>
+          <tr id="qiang">
+            <td><label>Qiang</label></td>
+            <td><input class="items"></td>
+            <td><label class="total"></label></td>
+            <td><label class="balance"></label></td>
+          </tr>
+          <tr id="yan">
+            <td><label>Yan</label></td>
+            <td><input class="items"></td>
+            <td><label class="total"></label></td>
+            <td><label class="balance"></label></td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr id="summary">
+            <td><label>Summary</label></td>
+            <td><label class="items"></label></td>
+            <td><input class="total"></td>
+            <td><label class="balance"></label></td>
+          </tr>
+        </tfoot>
+      </table>
+      <button id="btn-calc">Calc</button>
+      <button id="btn-reset">Reset</button>
+    </div>
+  </body>
+</html>
