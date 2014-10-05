@@ -44,9 +44,6 @@
             summary.total = parseFloat(calcWrap.find("#summary .total").val());
             if (isNaN(summary.total)) {
                 summary.total = -1;
-                calcWrap.find("#summary .total").addClass("warning");
-            } else {
-                calcWrap.find("#summary .total").removeClass("warning");
             }
             output = {};
             output.input = input;
@@ -67,9 +64,11 @@
 
             summaryWrap = this.root.find("#summary");
             if (output.summary.isValid) {
+                summaryWrap.find(".total").removeClass("warning");
                 summaryWrap.find(".items").text(output.summary.common.toFixed(2));
                 summaryWrap.find(".balance").text(output.summary.shared.toFixed(2));
             } else {
+                summaryWrap.find(".total").addClass("warning");
                 summaryWrap.find(".items").text('N/A');
                 summaryWrap.find(".balance").text('N/A');
             }
@@ -114,7 +113,7 @@
                 input[i].balance = input[i].payed + avgShared - input[i].subTotal;
             }
             
-            if (output.summary.total < 0) {
+            if (output.summary.total < 0 || output.summary.total < total) {
                 output.summary.isValid = false;
             } else {
                 output.summary.isValid = true;
